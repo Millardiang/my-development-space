@@ -28,7 +28,7 @@ device is rotated:
 | Layout | Used when | Design size | Arrangement |
 |---|---|---|---|
 | Landscape | wider than tall | 1280 × 800, fitted to the screen | the console layout |
-| Portrait | tablet held upright (600 px wide or more) | 800 × 1480, fitted to the screen, no scrolling | outdoor and wind gauges side by side, readings, sun/moon, channel rings, rain, barometer |
+| Portrait | tablet held upright (600 px wide or more) | 800 × 1518, fitted to the screen, no scrolling | outdoor and wind gauges side by side, readings, sun/moon, channel rings, rain, barometer |
 | Phone | narrow screens (under 600 px) | 540 wide, fitted to the width, scrolls | one column; readings in 3 × 2; header on two rows; a narrower sun/moon drawing with larger text |
 
 **Settings → Layout** can force one of them (Auto, Landscape, Portrait, Phone);
@@ -321,6 +321,11 @@ again.
   driver calls the field and add it to `[[FieldMap]]` or the relevant channel
   section.
 * Turn on `debug = 1` in `weewx.conf` to see how long the data build takes.
+
+## Changes and versions
+
+See [CHANGELOG.md](CHANGELOG.md) for what changed in each release, and
+[VERSIONING.md](VERSIONING.md) for how version numbers are chosen.
 
 ## Licence
 

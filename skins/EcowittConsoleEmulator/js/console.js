@@ -1223,7 +1223,7 @@
   // ---------------------------------------------------------------- init
   // ---------------------------------------------------------------- layout
   // landscape: the console layout (1280 x 800), fitted to the screen
-  // portrait:  tablet held upright (800 x 1480), fitted to the screen
+  // portrait:  tablet held upright (800 x 1518), fitted to the screen
   // phone:     narrow screens, one column (540 wide), fitted to the width and scrolling
   var STAGES = { landscape: [1280, 800], portrait: [800, 1518], phone: [540, 2062] };
   function autoLayout(w, h) {

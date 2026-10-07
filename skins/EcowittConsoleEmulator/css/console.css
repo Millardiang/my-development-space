@@ -174,7 +174,7 @@ section { position: absolute; }
 
 
 /* =====================================================================
-   Portrait tablet: 800 x 1480, fitted to the screen
+   Portrait tablet: 800 x 1518, fitted to the screen
    ===================================================================== */
 body[data-layout="portrait"] #stage { width: 800px; height: 1518px; }
 body[data-layout="portrait"] #hdr { width: 800px; height: 98px; padding: 4px 14px 0; flex-wrap: wrap; align-content: flex-start; }
