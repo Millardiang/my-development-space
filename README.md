@@ -205,7 +205,7 @@ Share → "Add to Home Screen".
 | CH | Switches the second pair of rings between the temperature/humidity channels that are reporting: Indoor, then each WN31 (CH1–CH8). Greyed out when only one channel reports |
 | Battery | Battery and signal of every sensor that reports them |
 | Refresh | Reload data now |
-| Settings | Units, layout, theme, 12/24 h clock, seconds, time zone (station or this device), keep awake, full screen on touch, data status |
+| Settings | Units, layout, theme, 12/24 h clock, seconds, keep awake, full screen on touch, data status |
 
 Tapping works too: the channel gauges cycle channels, the soil/leaf line cycles
 through every soil-moisture and leaf-wetness channel, the PM2.5 readout cycles PM
@@ -218,7 +218,7 @@ arrow is the 10-minute average direction.
 
 All times (clock, date, sunrise/sunset, moonrise/moonset, chart axes) are shown in
 the **station's** time zone, whatever the time zone of the tablet or phone viewing
-the page. Settings → Time zone → *This device* switches a device to its own time.
+the page.
 
 ## Configuration (`skins/EcowittConsoleEmulator/skin.conf`, `[Extras]`)
 

@@ -295,18 +295,16 @@
   }
 
   // ---------------------------------------------------------------- header / clock
-  // ---- station time: every time on the page is shown in the WeeWX machine's time zone
-  // (sent by the report), or the device's if Settings → Time zone says so.
+  // ---- station time: every time on the page is shown in the station's time zone
+  // (sent by the report), whatever the time zone of the device viewing the page.
   // W(t) gives a Date whose UTC fields are the wall-clock time; read it with getUTC*().
   var zoneOK = {}, tzFmt = null, tzFmtZone = null;
   function zoneValid(z) {
     if (!(z in zoneOK)) { try { new Intl.DateTimeFormat('en-US', { timeZone: z }); zoneOK[z] = true; } catch (e) { zoneOK[z] = false; } }
     return zoneOK[z];
   }
-  function deviceTime() { return S.opts && S.opts.timeMode === 'device'; }
   function stationZone() { var z = S.arch && S.arch.tz; return z && zoneValid(z) ? z : null; }
   function tzOffset(t) {
-    if (deviceTime()) return -new Date(t * 1000).getTimezoneOffset() * 60;
     var z = stationZone();
     if (z) {
       if (tzFmtZone !== z) {
@@ -319,6 +317,7 @@
       return Date.UTC(+p.year, +p.month - 1, +p.day, (+p.hour) % 24, +p.minute, +p.second) / 1000 - Math.floor(t);
     }
     // zone name not known to this browser: the station's UTC offset at report time
+    // (the device's own offset is used only until the first report has loaded)
     return (S.arch && isNum(S.arch.tzOffset)) ? S.arch.tzOffset : -new Date(t * 1000).getTimezoneOffset() * 60;
   }
   function W(t) { return new Date((Math.floor(t) + tzOffset(t)) * 1000); }
@@ -822,14 +821,13 @@
       '<div class="opt"><span>Layout</span>' + seg('layout', [['auto', 'Auto'], ['landscape', 'Landscape'], ['portrait', 'Portrait'], ['phone', 'Phone']], S.opts.layout || 'auto') + '</div>' +
       '<div class="opt"><span>Theme</span>' + seg('theme', [['navy', 'Navy'], ['black', 'Black'], ['light', 'Light']], S.opts.theme) + '</div>' +
       '<div class="opt"><span>Clock</span>' + seg('clock24', [['true', '24 h'], ['false', '12 h']], S.opts.clock24) + '</div>' +
-      '<div class="opt"><span>Time zone</span>' + seg('timeMode', [['station', 'Station'], ['device', 'This device']], S.opts.timeMode || 'station') + '</div>' +
       '<div class="opt"><span>Show seconds</span>' + seg('seconds', [['true', 'On'], ['false', 'Off']], S.opts.seconds) + '</div>' +
       '<div class="opt"><span>Keep screen awake</span>' + seg('wake', [['true', 'On'], ['false', 'Off']], S.opts.wake) + '</div>' +
       '<div class="opt"><span>Full screen on touch</span>' + seg('fullscreen', [['true', 'On'], ['false', 'Off']], S.opts.fullscreen !== false) + '</div>' +
       '<div class="meta">' + esc(S.cfg.title || a.station) + (a.hardware ? ' · ' + esc(a.hardware) : '') + '<br>' +
       'Archive record: ' + dtf({ day: 'numeric', month: 'short', year: 'numeric' }).format(W(a.archiveTime)) + ' ' + hhmm(a.archiveTime) +
       ' (every ' + Math.round(a.interval / 60) + ' min)<br>' +
-      'Times shown in ' + (deviceTime() ? 'this device\'s time zone' : 'station time' + (stationZone() ? ' (' + esc(stationZone()) + ')' : '')) + '<br>' +
+      'Times shown in station time' + (stationZone() ? ' (' + esc(stationZone()) + ')' : '') + '<br>' +
       'Live data: ' + (liveFresh() ? 'OK, ' + Math.round(now() - S.live.written) + ' s old' : (S.live ? 'stale' : 'not available')) + ' (' + esc(S.cfg.live_url) + ')<br>' +
       'EcowittConsoleEmulator ' + esc(a.version) + ' · WeeWX ' + esc(a.weewx) + '</div>';
     openOverlay('Settings', html);
