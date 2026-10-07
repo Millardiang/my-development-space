@@ -1,5 +1,8 @@
 # Installer for the EcowittConsoleEmulator skin (WeeWX 5) - weewx-ecowitt_console_emulator
 #
+# Copyright (c) Ian Millard 2026
+# Distributed under the terms of the GNU Public License (GPLv3)
+#
 #   weectl extension install weewx-ecowitt_console_emulator.zip
 #
 # Works with any driver for an Ecowitt gateway or console. If the optional
@@ -53,7 +56,7 @@ class EcowittConsoleEmulatorInstaller(ExtensionInstaller):
             name='ecowitt_console_emulator',
             description='Ecowitt console emulator: full-screen dashboard in the style of the Ecowitt HP2560 console, '
                         'for any Ecowitt gateway device.',
-            author='EcowittConsoleEmulator',
+            author='Ian Millard',
             archive_services='user.ecowitt_console_emulator.EcowittConsoleEmulatorArchive',
             report_services='user.ecowitt_console_emulator.EcowittConsoleEmulatorLive',
             config={

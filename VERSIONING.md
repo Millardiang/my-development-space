@@ -93,3 +93,7 @@ grep -rn 'VERSION = ' install.py bin/user/ skins/EcowittConsoleEmulator/skin.con
 Versions for testing before a release add a suffix, for example `1.1.0-beta.1`
 or `1.1.0-rc.1`. They sort before the final `1.1.0` and are published as GitHub
 pre-releases.
+
+---
+
+Copyright (c) Ian Millard 2026

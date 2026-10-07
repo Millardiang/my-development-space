@@ -2,6 +2,8 @@
 #    EcowittConsoleEmulator (weewx-ecowitt_console_emulator) - a WeeWX 5 skin that emulates
 #    the Ecowitt WH2560/HP2560 console as a full-screen dashboard
 #
+#    Copyright (c) Ian Millard 2026
+#
 #    Distributed under the terms of the GNU Public License (GPLv3)
 #
 """Support code for the EcowittConsoleEmulator skin.

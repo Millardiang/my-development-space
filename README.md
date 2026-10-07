@@ -329,5 +329,7 @@ See [CHANGELOG.md](CHANGELOG.md) for what changed in each release, and
 
 ## Licence
 
+Copyright (c) Ian Millard 2026
+
 GPLv3. Ecowitt is a trademark of its owner; this project is not affiliated with
 Ecowitt. All icons are original SVG drawings.

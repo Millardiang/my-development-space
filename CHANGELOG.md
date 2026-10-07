@@ -72,6 +72,11 @@ browser into a full-screen emulation of the Ecowitt WH2560/HP2560 console.
   has and, only when weewx-EcowittGateway is installed, where live data comes from.
 - Unattended installs with `--yes --rain=tipping|piezo|both --live=driver|skin`.
 - weewx-EcowittGateway is optional; the skin works with any driver for an Ecowitt
-  gateway or current consoles.
+  gateway or console.
 
+[Unreleased]: https://github.com/Millardiang/weewx-ecowitt_console_emulator/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/Millardiang/weewx-ecowitt_console_emulator/releases/tag/v1.0.0
+
+---
+
+Copyright (c) Ian Millard 2026

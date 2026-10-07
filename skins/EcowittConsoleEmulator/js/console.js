@@ -2,6 +2,8 @@
  * EcowittConsoleEmulator — dashboard logic for the WeeWX EcowittConsoleEmulator skin.
  * Layout follows the Ecowitt WH2560 / HP2560 console.
  *
+ * Copyright (c) Ian Millard 2026
+ *
  * Two data sources:
  *   ecowitt.json  written by WeeWX each archive interval (highs/lows, rain totals,
  *                 trends, almanac); also embedded in index.html as ECCE_INITIAL

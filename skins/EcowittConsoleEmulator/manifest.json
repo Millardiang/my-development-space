@@ -1,4 +1,5 @@
 {
+  "_copyright": "Copyright (c) Ian Millard 2026",
   "name": "Weather Station",
   "short_name": "Weather",
   "start_url": "index.html",
