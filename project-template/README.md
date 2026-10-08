@@ -64,4 +64,4 @@ Record useful findings, design decisions and things to remember here.
 
 ## License
 
-MIT, see [LICENSE](LICENSE).
+Licensed under the [GNU General Public License v3.0](LICENSE).

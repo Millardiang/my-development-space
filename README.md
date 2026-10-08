@@ -94,7 +94,7 @@ Suggested status values: 🟢 Active · 🟡 Paused · ✅ Complete · 🗄️ A
 | File / folder        | Purpose                                                  |
 | -------------------- | -------------------------------------------------------- |
 | `README.md`          | This introduction                                        |
-| `LICENSE`            | MIT license, inherited by every project branch           |
+| `LICENSE`            | GPLv3 license, inherited by every project branch         |
 | `.gitignore`         | Common ignores for OS files, editors, and popular stacks |
 | `.gitattributes`     | Consistent line endings across platforms                 |
 | `.editorconfig`      | Shared editor formatting defaults                        |
@@ -105,4 +105,8 @@ Suggested status values: 🟢 Active · 🟡 Paused · ✅ Complete · 🗄️ A
 
 ## License
 
-Released under the [MIT License](LICENSE) unless a project branch states otherwise.
+Copyright (C) 2026 Ian Millard
+
+This repository is free software: you can redistribute it and/or modify it under the terms of the [GNU General Public License v3.0](LICENSE) as published by the Free Software Foundation, unless a project branch states otherwise.
+
+It is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the [LICENSE](LICENSE) file for details.
